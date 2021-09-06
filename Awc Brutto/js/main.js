@@ -1,37 +1,84 @@
-console.log("fuck");
-var span=document.getElementsByTagName('span');
-var div=document.querySelectorAll('div.carousel');
-var l=0;
-
-console.log(span.length)
+var trying=document.getElementById("try");
 
 
-span[1].onclick = function(){
-l++;
-console.log("Clicked");
-for(var i of div) {
-       /* todo si puo migliorare con un calcolo  */
-    if (l==0){i.style.left = "0px";}
-    if (l==1){i.style.left = "-740px";}
-    if (l==2){i.style.left = "-1480px";}
-    if (l==3){i.style.left = "-2220px";}
-    if (l==4){i.style.left = "-2960px";}
-    if (l>4) {l=4;};
+trying.onclick=()=>{
+   //TODO repeat code
+   //this is needed to inject code into html
+   var howeverManyYouNeed=10
+
+   //dictionary to know how many part we need
+   let dict={0:"MyFilms",1:"Wishlist",2:"Popular"}
+
+
+
+//\/*dizionario con giurid per mettere le funzioni dentro ad un oggetto dizionario*/
+//\/*questo è un esempio con una funzione*/ 
+//\let dict2=[{
+//\
+//\nome:"home",
+//\azione:()=>{
+//\   alert(this.nome)
+//\}
+//\},{
+//\nome:"nome2",
+//\azione:()=>{
+//\
+//\   alert(this.nome)
+//\
+//\}}];
+
+
+   document.getElementById("content-container").innerHTML ="";
+   //create in an automatic way the 3 parts
+
+   for(i = 0;i<Object.keys(dict).length;i++)
+   {
+
+      document.getElementById("content-container").innerHTML += `
+      <h1>New Arrival</h1>
+            <!--arrow to the left and to the right-->
+            <section id=section`+dict[i]+`></section>`;
+
+            for(j=0;j<12;j++){
+
+               document.getElementById("section"+dict[i]).innerHTML += 
+               //`<div class=container_`+dict[i]+`>
+               `<div class=carousel_card_`+dict[i]+`>
+               `+j+`
+               </div>`
+            }
+
+            console.log("fock")
    }
 }
 
 
 
-span[0].onclick = ()=>{
-       l--;
-       for(var i of div) {
-       /* todo si puo migliorare con un calcolo  */
-    if (l==0){i.style.left = "0px";}
-    if (l==1){i.style.left = "-740px";}
-    if (l==2){i.style.left = "-1480px";}
-    if (l==3){i.style.left = "-2220px";}
-    if (l==4){i.style.left = "-2960px";}
-    if (l<0) {l=0;}
-       }
-   
-}   
+
+//3 section home 
+
+//my films
+//saved in local storage
+var myfilms=document.querySelectorAll('div.carousel_card_MyFilms');
+var l=0;
+
+
+//wishlist
+//saved in local storage
+var wishlist=document.querySelectorAll('div.carousel_card_Wishlist');
+
+
+//popular
+//get from apis
+var popular=document.querySelectorAll('div.carousel_card_Popular');
+
+
+//
+//
+
+
+
+//only 1 for key
+var array =[1,2,3,4,5,6,7,8,9];
+window.localStorage.removeItem("name","exanor");
+window.localStorage.removeItem("try",JSON.stringify(array));
