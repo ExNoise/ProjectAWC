@@ -1,0 +1,17 @@
+||||||||||||||||||||||||||
+TODOs:
+-use the APIs
+-in main.js make the local storage works
+-in index.htm make the navbar menu work
+-make the seller side 
+-make the logins
+-test login
+
+    index.htm 
+-adjust the onload function
+-save the status of the account in the localStorage to make the seller account or the customer account show
+-make a total switch between the seller and the customer
+
+    main.js 
+-make the onload function
+-make the switch seller/customer

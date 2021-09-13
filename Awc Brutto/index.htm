@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,62 +8,65 @@
 <link rel="stylesheet" href="css/main.css">
 <script src="js/api.js" async></script>
 <script src="js/main.js" async></script>
+<script src="js/popup.js" async></script>
 
 <!--<link rel="javascript" href="js/main.js">-->
 
 </head>
-<body>
+
+<body onload="myFunction">
+
+    <div class="blur content" >
+
     <!-- Navigation -->
-    <div id="navbar">
-        <p>cum</p>
+       <div id="navbar">
+       
+
+       </div>
+
+
+       <!-- Menu on the left side --> 
+           <div id="left-menu">
+            <p><a id="try"> prova</a></p>
+           </div>
+
+       <!--Content -->
+           <div id="content-container">
+
+               <main>
+
+                <h1>New Arrival</h1>
+
+                
+                <section>
+                    <div class="bg-img" id="carousel_card">01</div>
+                    <div class="bg-img" id="carousel_card">02</div>
+                    <div class="bg-img" id="carousel_card">03</div>
+                    <div class="bg-img" id="carousel_card">04</div>
+                    <div class="bg-img" id="carousel_card">05</div>
+                    <div class="bg-img" id="carousel_card">06</div>
+                    <div class="bg-img" id="carousel_card">07</div>
+                    <div class="bg-img" id="carousel_card">09</div>
+                    <div class="bg-img" id="carousel_card">10</div>
+                    <div class="bg-img" id="carousel_card">11</div>
+                    <div class="bg-img" id="carousel_card">12</div>
+                    <div class="bg-img" id="carousel_card">13</div>
+
+                </section>
+
+               </main>
+        </div>
 
 
     </div>
-
-
-    <!-- Menu on the left side --> 
-        <div id="left-menu">
-            <p><a id="try"> prova</a></p>
-        </div>
-
-    <!--Content -->
-        <div id="content-container">
-            <main>
-
-            <h1>New Arrival</h1>
-
-           
-            <section>
-                <div class="carousel_card">01</div>
-                <div class="carousel_card">02</div>
-                <div class="carousel_card">03</div>
-                <div class="carousel_card">04</div>
-                <div class="carousel_card">05</div>
-                <div class="carousel_card">06</div>
-                <div class="carousel_card">07</div>
-                <div class="carousel_card">09</div>
-                <div class="carousel_card">10</div>
-                <div class="carousel_card">11</div>
-                <div class="carousel_card">12</div>
-                <div class="carousel_card">13</div>
-                <div class="carousel_card">14</div>
-                <div class="carousel_card">15</div>
-                <div class="carousel_card">16</div>
-                <div class="carousel_card">17</div>
-                <div class="carousel_card">18</div>
-                <div class="carousel_card">19</div>
-                <div class="carousel_card">20</div>
-
-            </section>
-
-        
-        
-            </main>
-            
-        </div>
-
     
+    <div class="popup vanish" id="popup"> 
+        <button class="close-button" aria-label="Close alert" type="button" onclick="closePopup()" data-close>
+            <span aria-hidden="true">&times;</span>
+          </button>
+        lorem ipsum dolor sit amet, consectet
 
+    </div>
 
 </body>
 </html>

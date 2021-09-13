@@ -1,0 +1,75 @@
+body{
+    display:grid;
+    gap:0.1em;
+    
+    grid-template-areas:"nav nav "
+                        "img login ";
+    
+        grid-template-columns:minmax(60%,1fr) minmax(40%,1fr) ;
+        grid-template-rows: minmax(7.5%,1fr) minmax(92.5%,5fr) ;
+        
+    
+        width: 100vw;
+        height: 100vh;
+    
+    
+    }
+
+    #login_section{
+        height: 100%;
+        width: 100%;
+        align-items:center;
+        
+        
+    }
+
+    #login-form{
+        margin: auto;
+
+    }
+
+    .login{
+        margin: 0;
+position: relative;
+        top: 30%;
+        -ms-transform: translateY(-70%);
+        transform: translateY(-70%);
+    }
+
+
+    #nav{
+        grid-area: nav;
+        background-color: yellow;
+        height: 100%;
+        width: 100%;
+    }
+
+    #login_section {
+        grid-area: login; 
+        background-color: red;
+        height: 100%;
+    }
+
+    #image_section {
+        grid-area: img;
+        background-color: blue;
+        width: 100%;
+    }
+
+    #username{
+        width:100%;
+        margin-bottom:5px
+    }
+
+    #userpass{
+        width:100%;
+        margin-bottom:5px
+    
+    }
+
+    #login_btn{
+        width:100%;
+        margin-top: 5px;
+        margin-bottom:5px
+
+    }
