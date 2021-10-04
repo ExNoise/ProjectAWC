@@ -7,11 +7,25 @@ TODOs:
 -make the logins
 -test login
 
+    general
+-is possible to use more than one file instead of using innerhtml is better? no....is clean? yes
+-
+
     index.htm 
 -adjust the onload function
 -save the status of the account in the localStorage to make the seller account or the customer account show
 -make a total switch between the seller and the customer
 
+
     main.js 
 -make the onload function
 -make the switch seller/customer
+
+
+
+    documentation.txt
+-start the documentation
+-
+
+
+

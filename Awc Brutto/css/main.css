@@ -245,3 +245,22 @@ sectionPopular{
     top: 6px;
     right: 10px;
 }
+
+#search_bar{
+    float:right;
+    position: relative;
+    right:2%;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+
+}
+
+#wishlist{
+
+    background-color: grey;
+    width: 20px;
+    height:20px;
+
+}

@@ -19,10 +19,13 @@
     <div class="blur content" >
 
     <!-- Navigation -->
-       <div id="navbar">
+        <div id="navbar">
        
 
-       </div>
+            <input id="search_bar" type="text" placeholder="Search..">
+            <button type="submit" onclick="search()"><i class=""></i> </button>
+
+        </div>
 
 
        <!-- Menu on the left side --> 
@@ -33,7 +36,7 @@
        <!--Content -->
            <div id="content-container">
 
-               <main>
+              <!-- <main>
 
                 <h1>New Arrival</h1>
 
@@ -54,7 +57,7 @@
 
                 </section>
 
-               </main>
+               </main>  -->
         </div>
 
 
@@ -63,8 +66,12 @@
     <div class="popup vanish" id="popup"> 
         <button class="close-button" aria-label="Close alert" type="button" onclick="closePopup()" data-close>
             <span aria-hidden="true">&times;</span>
-          </button>
-        lorem ipsum dolor sit amet, consectet
+        </button>
+        <img id="poster_popup" src="">
+
+        <button class="wishlist" type="button" onclick="wishlist()">
+            <img id="heart" src=""> 
+        </button>
 
     </div>
 
