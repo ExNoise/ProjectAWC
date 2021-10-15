@@ -23,10 +23,9 @@ async function search(text){
 
 
 //get popular keywords
-async function popular(){
+async function getPopular(){
 
-    var search_text=encodeURIComponent(text)
-    const response = await fetch('https://api.themoviedb.org/3/search/keyword?api_key='+api_key+'&query='+search_text+'&page=1');
+    const response = await fetch('https://api.themoviedb.org/3/movie/popular?api_key='+api_key+'&language=en-US&page=1');
     const myJson = await response.json(); //extract JSON from the http response
         
     return myJson;
@@ -77,14 +76,30 @@ async function getImages(id_movie){
 //get the vertical image from the id
 async function getPoster (id_movie){
 
-    const response=await fetch('https://api.themoviedb.org/3/movie/'+id_movie+'/images?api_key='+api_key+'&language=it-IT')
+    const response=await fetch('https://api.themoviedb.org/3/movie/'+id_movie+'?api_key='+api_key+'&language=en-US')
+    
     const myJson = await response.json(); //extract json from response
-
-    var imageLink='https://image.tmdb.org/t/p/w500/'+myJson.backdrops.file_path
-
+    
+    var imageLink='https://image.tmdb.org/t/p/w500'+myJson.backdrop_path;
+    
+    console.log(imageLink)
+    
     return imageLink
 
 }
+
+async function getDetail (id_movie){
+    const response=await fetch('https://api.themoviedb.org/3/movie/'+id_movie+'?api_key='+api_key+'&language=en-US')
+    
+    const myJson = await response.json(); //extract json from response
+    
+    var details=myJson.overview;
+
+    return details;
+    
+
+}
+
 
 async function detail(id_movie){
 

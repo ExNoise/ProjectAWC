@@ -8,13 +8,12 @@
 <link rel="stylesheet" href="css/main.css">
 <script src="js/api.js" async></script>
 <script src="js/main.js" async></script>
-<script src="js/popup.js" async></script>
 
 <!--<link rel="javascript" href="js/main.js">-->
 
 </head>
 
-<body onload="myFunction">
+<body onload="Load('0');">
 
     <div class="blur content" >
 
@@ -23,14 +22,21 @@
        
 
             <input id="search_bar" type="text" placeholder="Search..">
-            <button type="submit" onclick="search()"><i class=""></i> </button>
+
 
         </div>
 
 
        <!-- Menu on the left side --> 
            <div id="left-menu">
-            <p><a id="try"> prova</a></p>
+            <div id="links">
+                <p><a id="placeholder"> placeholder</a></p>
+                <p><a id="placeholder"> placeholder</a></p>
+                <p><a id="placeholder"> placeholder</a></p>
+                <p><a id="placeholder"> placeholder</a></p>
+
+            </div>
+
            </div>
 
        <!--Content -->
@@ -67,11 +73,33 @@
         <button class="close-button" aria-label="Close alert" type="button" onclick="closePopup()" data-close>
             <span aria-hidden="true">&times;</span>
         </button>
-        <img id="poster_popup" src="">
 
-        <button class="wishlist" type="button" onclick="wishlist()">
-            <img id="heart" src=""> 
-        </button>
+       <!-- <button class="wishlist" type="button" onclick="wishlist()">    -->
+
+            <svg id="star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white" onclick="animWishlist()">
+                <path onclick="animWishlist()" d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/>
+            </svg>
+        <!--    </button>   -->
+
+        <img id="poster_popup">          
+        <div id="container-popup-open">
+            <div id="description">
+                <h1>Description</h1>
+                
+                <p id="description">Lorem ipsum dolor sit amet, consectetur</p>
+            </div>
+            <div id="buttons">
+
+                <p id="rent">Noleggio</p>
+                <button id="rent_button">rent</button>
+                <p id="buy">compra</p>
+                <button id="buy_button">buy</button>
+
+            </div>
+
+
+        </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+
 
     </div>
 

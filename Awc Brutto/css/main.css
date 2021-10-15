@@ -44,6 +44,13 @@ grid-template-areas:
 #left-menu{
     grid-area:nav;
     background-color: red;
+    
+}
+
+#left-menu #links{
+    padding-top:10px;
+    padding-left:5px;
+
 
 }
 
@@ -65,13 +72,12 @@ main {
 
 section{
     width:98%;
-    height: 300px;
-    height:flex;
+    height: auto;
+    align-items: flex-start;
     background:#f4f4f4;
     margin:1px auto;
     display:flex;
     justify-content:left;
-    align-items: center;
     overflow-x:auto; 
 }
 
@@ -80,7 +86,7 @@ section::-webkit-scrollbar {
     width: 12px;               /* width of the entire scrollbar */
 }
   
-  section::-webkit-scrollbar-track {
+section::-webkit-scrollbar-track {
     background: orange;        /* color of the tracking area */
 }
   
@@ -92,34 +98,33 @@ section::-webkit-scrollbar-thumb {
 
 
 div .carousel_card{
-    min-width:300px;
-    height:200px;
+    min-width:150px;
+    height:auto;
     position:relative;
     left:0;
     text-align:center;
-    padding-top:60px;
-    font-size:100px;
     font-weight: bold;
     margin:10px 5px;
     color:white;
     background:purple;
     transition:0.5s;
     align-content: center;
+    object-fit: contain;
+
 
 }
 
 div .carousel_card:hover{
     background:red;
     position:relative;
-    min-width:400px;
-    height:275px;
-
+    min-width:225px;
+    height:auto;
 }
 
-
+/* bho*/
 div .carousel_card_MyFilms{
-    min-width:300px;
-    height:200px;
+    min-width:270px;
+    height:auto;
     position:relative;
     left:0;
     text-align:center;
@@ -134,7 +139,7 @@ div .carousel_card_MyFilms{
 
 sectionMyFilms{
     width:98%;
-    height:250px;
+    height:auto;
     background:#f4f4f4;
     margin:10px auto;
     display:flex;
@@ -171,7 +176,7 @@ sectionWishlist{
 
 div .carousel_card_Popular{
     min-width:300px;
-    height:200px;
+    height:auto;
     position:relative;
     left:0;
     text-align:center;
@@ -193,6 +198,7 @@ sectionPopular{
     justify-content:left;
     overflow-x:auto; 
 }
+/*bho fine*/
 
 .bg-img{
     position: absolute;
@@ -203,9 +209,9 @@ sectionPopular{
 }
 
 .bg-img:hover{
-    transition-delay: .5s;
-    width: 400px;
-    height: 250px;
+    animation-delay: .5s;
+    width: 250px;
+    height: auto;
 }
 
 .blur{
@@ -244,6 +250,8 @@ sectionPopular{
     position: absolute;
     top: 6px;
     right: 10px;
+    width: 20px;
+    height: 20px;
 }
 
 #search_bar{
@@ -258,9 +266,37 @@ sectionPopular{
 }
 
 #wishlist{
-
     background-color: grey;
     width: 20px;
     height:20px;
 
 }
+
+#poster_popup{
+
+    width: 100%;
+
+    padding-top: 10px;
+}
+
+#container-popup-open{
+    display:flex;
+    height: 50%;
+    flex-direction: row;
+    padding-top: 5px;
+}
+
+#description{
+
+    background-color:blue;
+    flex-grow: 2;
+    max-width: 70%;
+}
+
+#buttons{
+    background-color: red;
+    flex-grow: 2;
+    padding-top:5%;
+}
+
+
